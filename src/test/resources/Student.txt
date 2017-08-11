@@ -1,0 +1,51 @@
+http://www.lt.macmillan.cloud/launchpad/morris2e/
+BEDFORD, FREEMAN & WORTH PUBLISHING GROUPInstructor:gaurav sri-
+#Login
+Enter_email: xpath: .//input[@id='EMail']
+Enter_password: xpath: //*[@id='Password']
+Signin_Button: xpath: //*[@id='loginButton']
+
+#Select LaunchPad
+University_name: xpath: //input[@id='School']
+Academic_term: xpath: //select[@id='term']
+Summer_term: xpath: //*[@id='term']//option[text()='Summer 2017']
+Join_launchpad: xpath: //a[contains(@href,'13098084')][text()='Join LaunchPad']
+Continue_to_site: xpath: .//input[@id='btnLoginContinue']
+
+#Enter course
+Enter_course_button: xpath: //*[@id='widgetBody']//button[@class='EnterCourse px-button right']
+
+#Enter quiz
+Enter_assigned_quiz: xpath: .//div[@id='assignments']/div/div[1]
+
+#Start quiz
+Start_quiz: xpath: //div[@class='quiz-content']//a[@class='start-quiz px-button large primary']
+
+#attempt quiz
+Question_frame: xpath: (//iframe[contains(@id,'easyXDM_default')])[2]
+iframe_contentBody: xpath: //iframe[contains(@id,'contentBody')]
+iframe_courseContentFrame: xpath: //iframe[contains(@title,'Course Content Frame')]
+Answer_1: xpath: (//table[@class='examQuestionTable']//table[@class='examAnswerTable']//input[@type='radio' and @title='Choice 1'])[1]
+Answer_2: xpath: //div[@id='page1']/table[2]/tbody/tr[2]//input[@value='1']
+Answer_3: xpath: //div[@id='page1']/table[3]/tbody/tr[2]//input[@value='1']
+Answer_4: xpath: //div[@id='page1']/table[4]/tbody/tr[2]//input[@value='1']
+Answer_5: xpath: //div[@id='page1']/table[5]/tbody/tr[2]//input[@value='1']
+Quiz_submit_button: xpath: //button[text()='Submit']
+Submit_confirmation: xpath: //*[@id='ext-comp-1006']/tbody/tr[2]/td[2]
+Done_test_button: xpath: //span[@data-reactid='.0.$=1$fnewindow:0.0.0.0.1']
+Home_button: xpath: //span[text()='Home']
+
+
+#logout
+Account_menu: xpath: //a[@id='accountMenu']
+Sign_out: xpath: //span[text()='Sign Out']
+
+
+#Gradebook check
+Gradebook_button: xpath: //span[@class='icon-gradebook']
+Gradebook_frame: xpath: (//iframe[contains(@id,'easyXDM_default')])[2]
+Quiz_number: xpath: .//*[@id='gradesTable_FrameContent']//tr[@data-syllabus-order='4']/td[2]
+Close_quiz_number: xpath: .//button[text()='Close']
+
+
+

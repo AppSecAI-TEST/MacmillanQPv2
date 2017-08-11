@@ -1,3 +1,5 @@
+surbhi.pandey.instructor@macmillan.com/Password1     course no.== 4698217
+dev1-aws.macmillanhighered.com/Launchpad/myers11e(morris2e)
 #Login
 Enter_email: xpath: //*[@id ='EMail']
 Enter_password: xpath: //*[@id='Password']
@@ -10,13 +12,14 @@ Next2_button_create_course: xpath: .//div[@aria-labelledby='ui-id-2']//button[@c
 Edit_name_of_course: xpath: .//*[@id='course-title']
 Select_university: xpath: //*[@id='school-name']
 Button_create_course: xpath: //*[@class='ui-dialog-buttonset pxactivatecourse-dialog-buttonset']//button[@class='primary-green ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only']
-New_course_link: xpath: //a[contains(@href,'4698217')][text()='TESTNAV']
-Course_activate_link: xpath: .//div[@class='course-actions']//a[@data-dw-id='4698217']//i[@class='fa fa-exclamation-triangle']
+New_course_link: xpath: //a[contains(@href,'13098084')][text()='TESTNAV']
+Course_activate_link: xpath: .//div[@class='course-actions']//a[@data-dw-id='13098084']//i[@class='fa fa-exclamation-triangle']
 Activate_course_button: xpath: //span[text()='Activate']
 Done_activate_course_button: xpath: //span[text()='Done']
-Deactivation_button: xpath: //a[@data-dw-id='4698217']//i[@class='fa fa-exclamation-triangle']
+Deactivation_button: xpath: //a[@data-dw-id='13098084']//i[@class='fa fa-exclamation-triangle']
 
 #Create new Quiz
+Remind_me_later_button: xpath: //a[@class='prev-btn default-later-btn']
 Enter_your_course_button: xpath: .//*[@id='widgetBody']//button[@class='EnterCourse px-button right']
 Add_new_button: xpath: //button[@class='lnkTopCreateContent']
 Quiz_option_from_the_list: xpath: //span[text()='Quiz']

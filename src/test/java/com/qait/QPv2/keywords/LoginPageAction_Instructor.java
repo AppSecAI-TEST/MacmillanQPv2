@@ -17,8 +17,8 @@ public class LoginPageAction_Instructor extends ObjectFileReader {
 		obj.getWebDriver();
 
 		
-		obj.element("Enter_email").sendKeys("surbhi.pandey.instructor@macmillan.com");
-		obj.element("Enter_password").sendKeys("Password1");
+		obj.element("Enter_email").sendKeys("g.s.instructor@macmillan.com");
+		obj.element("Enter_password").sendKeys("!@");
 		obj.element("Signin_Button").click();
 		Thread.sleep(25000);
 		obj.element("Create_course_button").isDisplayed();
@@ -29,6 +29,7 @@ public class LoginPageAction_Instructor extends ObjectFileReader {
 		login();
 		
 		Thread.sleep(25000);
+		
 		obj.element("Create_course_button").click();
 		Thread.sleep(5000);
 		obj.element("Next_button_create_course").click();
@@ -53,6 +54,7 @@ public class LoginPageAction_Instructor extends ObjectFileReader {
 	public void check_create_course() throws Exception{
 		login();
 		Thread.sleep(25000);
+//		obj.element("Remind_me_later_button").click();
 		obj.element("New_course_link").isDisplayed();
 		
 	}
@@ -60,11 +62,13 @@ public class LoginPageAction_Instructor extends ObjectFileReader {
 	public void acivate_course() throws Exception{
 		login();
 		Thread.sleep(25000);
+//		obj.element("Remind_me_later_button").click();
 		obj.element("Course_activate_link").click();
 		Thread.sleep(3000);
 		obj.element("Activate_course_button").click();
 		Thread.sleep(2000);
-		obj.element("//span[text()='Done']").click();
+		obj.element("Done_activate_course_button").click();
+		obj.element("Deactivation_button").isDisplayed();
 		
 				
 	}
@@ -107,8 +111,11 @@ public class LoginPageAction_Instructor extends ObjectFileReader {
 		obj.element("Pull_pool_questions").click();
 		obj.element("Pull_pool_questions").sendKeys("5");
 		obj.element("Create_pool").click();
+		Thread.sleep(2000);
 		obj.element("Create_questions").click();
 		Thread.sleep(7500);
+		
+		
 		obj.element("Question_editor_text_area").click();
 		String s="Select noun from the following:";
 		obj.element("Question_editor_text_area").sendKeys(s);

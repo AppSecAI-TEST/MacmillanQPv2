@@ -1,36 +1,56 @@
 package com.qait.automation.getpageobjects;
 
+import com.google.common.base.Function;
+
 import com.qait.automation.WebDriverFactory;
+//import com.qait.automation.utils.CustomAssert;
+//import com.qait.automation.utils.LayoutValidation;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.Driver;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class ObjectFileReader {
 
+	private static final TimeUnit SECONDS = null;
 	public WebDriver driver;
+	public static String pageName;
 	WebDriverFactory w =new WebDriverFactory();
-	static String filepath = "/home/navendushukla/workspace_OLD/MacmillanQPV2/src/test/resources/loginpage.txt";
+	static String filepath = "/home/navendushukla/workspace_OLD/MacmillanQPV2/src/test/resources/";	
+	
+	public String GetPage(String pageName) {
+
+		this.pageName = pageName;
+		return pageName;
 		
+	}
 	
 	public static String[] getELementFromFile(String elementName) {
         
         BufferedReader br = null;
         String matchingLine = "";
+       // String pagepath= filepath+pageName+".txt";
+       // System.out.println(filepath+pageName+".txt");
         try {
         	
-        	File f = new File(filepath);
+        	File f = new File(filepath+pageName+".txt");
+        	
         	if(!f.exists()) { 
         		//System.out.println("WARNING : '" + tier + "/" + pageName + ".txt' file not found");
         	}else {
-                br = new BufferedReader(new FileReader(filepath));
+                br = new BufferedReader(new FileReader(filepath+pageName+".txt"));
                 String line = br.readLine();
                 while (line != null) {
                     if (line.split(": ", 3)[0].equalsIgnoreCase(elementName)) {
@@ -87,13 +107,34 @@ public class ObjectFileReader {
 	
 	public WebDriver getWebDriver(){
 		driver=w.getDriver();
-		driver.get("https://dev1-aws.macmillanhighered.com/Launchpad/myers11e");//https://dev1-aws-reg.macmillanhighered.com/
+		driver.get("http://www.lt.macmillan.cloud/launchpad/morris2e/");//https://dev1-aws-reg.macmillanhighered.com/
+		//driver.manage().deleteAllCookies();
 		return driver;
 	}
 	public  WebElement element(String element) throws Exception {	
-		//WebDriver driver= w.getDriver();
-		return driver.findElement(getLocators(element));
-		
+		String driver1="";
+		WebElement w=driver.findElement(getLocators(element));
+		return w;
+	}
+	
+	
+	public void switchtoframe(String s) throws Exception
+	{
+		driver.switchTo().frame(element(s));
+	}
+	public void switchtodefault() throws Exception
+	{
+		driver.switchTo().defaultContent();
+	}
+
+	public <T> Wait<WebDriver> wait_for(String s) throws Exception{
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+			       .withTimeout(30, SECONDS)
+			       .pollingEvery(5, SECONDS)
+			       .ignoring(NoSuchElementException.class);
+		wait.until((Function<? super WebDriver, T>) element(s));
+	
+		return wait;
 	}
 	
 	

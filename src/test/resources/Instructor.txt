@@ -1,0 +1,106 @@
+http://www.lt.macmillan.cloud/launchpad/morris2e/
+#Login
+Enter_email: xpath: .//input[@id='EMail']
+Enter_password: xpath: //*[@id='Password']
+Signin_Button: xpath: //*[@id='loginButton']
+Remind_me_later_button: xpath: //a[@class='prev-btn default-later-btn']
+
+#Create new Course
+Create_course_button: id: create-course
+Next_button_create_course: css: .courseoption-dialog-next.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-focus
+Next2_button_create_course: xpath: .//div[@aria-labelledby='ui-id-2']//button[@class='courseoption-dialog-next ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only']
+Edit_name_of_course: xpath: .//*[@id='course-title']
+Select_university: xpath: //*[@id='school-name']
+Button_create_course: xpath: //*[@class='ui-dialog-buttonset pxactivatecourse-dialog-buttonset']//button[@class='primary-green ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only']
+New_course_link: xpath: //a[contains(@href,'13098084')][text()='TESTNAV']
+Course_activate_link: xpath: .//div[@class='course-actions']//a[@data-dw-id='13098084']//i[@class='fa fa-exclamation-triangle']
+Activate_course_button: xpath: //span[text()='Activate']
+Done_activate_course_button: xpath: //span[text()='Done']
+Deactivation_button: xpath: //a[@data-dw-id='13098084']//i[@class='fa fa-exclamation-triangle']
+
+#Create new Quiz
+Remind_me_later_button: xpath: //a[@class='prev-btn default-later-btn']
+Enter_your_course_button: xpath: .//*[@id='widgetBody']//button[@class='EnterCourse px-button right']
+Add_new_button: xpath: //button[@class='lnkTopCreateContent']
+Next_link_on_pop_up: xpath: //a[text()='Next']
+Quiz_option_from_the_list: xpath: //span[text()='Quiz']
+Select_title_field: xpath: //input[@id='Title']
+Save_quiz_button: xpath: //input[@class='px-button savebtn primary large']
+Item_saved_successfully_toast: xpath: //div[text()='Item saved successfully']
+Search_questions: xpath: //span[@data-reactid='.0.$=1$fnewindow:0.0.0.2.0.0.$questions.0.0']
+Basic_info: xpath: //span[@data-reactid='.0.$=1$fnewindow:0.0.0.2.0.0.$edit.0.0']
+Review_and_modify: xpath: //span[@data-reactid='.0.$=1$fnewindow:0.0.0.2.0.0.$currentassignment.0.0']
+Settings: xpath: //span[@data-reactid='.0.$=1$fnewindow:0.0.0.2.0.0.$settings.0.0']
+Assign_due_date: xpath: //span[@data-reactid='.0.$=1$fnewindow:0.0.0.2.0.0.$assign.0.0']
+Done_editing: xpath: //span[@data-reactid='.0.$=1$fnewindow:0.0.0.0.1']
+
+#add_Questions
+Question_type: xpath: //input[@id='s2id_autogen16']
+Question_type_advanced: xpath: .//div[@id='select2-drop']/ul/li[1]/div
+Question_type_essay: xpath: .//div[@id='select2-drop']/ul/li[2]/div
+Question_type_fill_in_the_blanks: xpath: .//div[@id='select2-drop']/ul/li[3]/div
+Question_type_graph_type: xpath: .//div[@id='select2-drop']/ul/li[4]/div
+Question_type_matching: xpath: .//div[@id='select2-drop']/ul/li[5]/div
+Question_type_multiple_choice: xpath: .//div[@id='select2-drop']/ul/li[6]/div
+Question_type_multiple_select: xpath: .//div[@id='select2-drop']/ul/li[7]/div
+Question_type_multiple_true/false: xpath: .//div[@id='select2-drop']/ul/li[8]/div
+Question_type_sequenced: xpath: .//div[@id='select2-drop']/ul/li[9]/div
+Apply_filters_button: xpath: .//button[@id='apply-meta-filter']
+MC_q1: xpath: //li[@data-reactid='.0.$=1$fnewindow:0.1.0.6.0.3:$results.2.1.0.0.$76f6a4e9-c538-447b-b9d3-aa1145c8639e0']//input[@type='checkbox']
+MC_q2: xpath: //li[@data-reactid='.0.$=1$fnewindow:0.1.0.6.0.3:$results.2.1.0.0.$88977b70-4cd1-4ce9-9421-016e5744aa071']//input[@type='checkbox']
+MC_q3: xpath: //li[@data-reactid='.0.$=1$fnewindow:0.1.0.6.0.3:$results.2.1.0.0.$8ecaeb23-de8e-4ef1-8157-6ff96a8dca542']//input[@type='checkbox']
+MC_q4: xpath: //li[@data-reactid='.0.$=1$fnewindow:0.1.0.6.0.3:$results.2.1.0.0.$97e132c3-82e0-4d06-a06f-647722556f5e3']//input[@type='checkbox']
+MC_q5: xpath: //li[@data-reactid='.0.$=1$fnewindow:0.1.0.6.0.3:$results.2.1.0.0.$98d9b508-5654-4b6e-92ec-c82e675e9a414']//input[@type='checkbox']
+MC_q6: xpath: //li[@data-reactid='.0.$=1$fnewindow:0.1.0.6.0.3:$results.2.1.0.0.$aa5bdf0f-8396-4bcf-994f-4c780a6c9ad35']//input[@type='checkbox']
+Add_checked_to: xpath: .//div[@id='addchecked-menu']
+Add_to_quiz: xpath: .//*[@id='addCheckedToQuiz']
+Question_added_to_assessment_toast: xpath: //div[text()='Question added to assessment.']
+Add_to_new_pool: xpath: .//*[@id='addchecked-menu']//a[@class='createNewPool']
+Enter_pool_name: xpath: .//input[@id='quesitonPoolsForm-poolName']
+Enter_pool_count: xpath: .//input[@id='quesitonPoolsForm-poolCount']
+Create_question_pool_button: xpath: //button[contains(text(),'Create Question Pool')]
+Question_added_to_pool_toast: xpath: //div[text()='Question Added to Pool']
+
+#Assign_duedate
+Assign_date: xpath: //input[@id='settingsAssignDueDate']
+Assign_points: xpath: //input[@id='txtGradePoints']
+Assign_due_date_button: xpath: //input[@id='btnAssign']
+Assignment_successful: xpath: .//div[text()='Item Assignment Saved']
+Home_button: xpath: //span[text()='Home']
+Account_menu: xpath: //a[@id='accountMenu']
+Sign_out: xpath: //span[text()='Sign Out']
+
+
+#create_question
+Create_question_dropdown: xpath: .//div[@id='create-new-question-dropdown']
+Create_MCQ: xpath: //li[@data-reactid='.0.$=1$fnewindow:0.1.0.6.0.3:$results.4.2.0.0.1.0']
+Create_Fill_in_the_blanks: xpath: //li[@data-reactid='.0.$=1$fnewindow:0.1.0.6.0.3:$results.4.2.0.0.1.3']
+TESTQUIZ_text: xpath: //h3[text()='TESTQUIZ']
+MCQ_frame: xpath: (//iframe[contains(@id,'easyXDM_default')])[2]
+MCQ_text_area: xpath: //textarea[@id='ext-comp-1003']
+ANS_1: xpath: //textarea[@id='ext-comp-1038']
+ANS_2: xpath: //textarea[@id='ext-comp-1052']
+ANS_3: xpath: //textarea[@id='ext-comp-1066']
+ANS_4: xpath: //textarea[@id='ext-comp-1080']
+Correct_ans: xpath: //input[@id='ext-comp-1053']
+Save_button_create_mcq: xpath: //button[@class='save-question px-button']
+
+
+#Gradebook check
+Gradebook_button: xpath: //span[@class='icon-gradebook']
+Gradebook_frame: xpath: (//iframe[contains(@id,'easyXDM_default')])[2]
+Quiz_number: xpath: //div[@id='c_0_3']/div/div[2]
+Close_quiz_number: xpath: .//button[text()='Close']
+Grade_earned: xpath: //td[@id='curvedField']/div/span
+Submit_score_gradebook: xpath: //table[@id='s_b']//button[text()='Submit Score']
+
+#gradebook export
+Gradebook_export_button: xpath: //button[@id='ext-gen65']
+Gradebook_export_dropdown: xpath: .//div[contains(@id,'x-form-el-filetype2')]/div/img
+Gradebook_export_txt: xpath: //div[contains(text(),'Tab-delimited file (*.txt)')]
+Gradebook_export_submit: xpath: //button[text()='Export']
+
+#gradebook import
+Gradebook_import_button: xpath: //button[text()='Import Scores']
+Gradebook_import_browse: xpath: //input[@id='importfile']
+Gradebook_import_score: xpath: //table[@class='gradebook-import default_font']/tbody/tr[4]/td[7]
